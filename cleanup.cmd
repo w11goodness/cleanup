@@ -28,6 +28,9 @@ Get-AppxPackage msteams | Reset-AppxPackage
 Get-AppxPackage Microsoft.AAD.BrokerPlugin | Reset-AppxPackage
 Get-AppxPackage Microsoft.MicrosoftEdge.Stable | Reset-AppxPackage
 
+#from https://github.com/asheroto/UninstallTeams
+irm asheroto.com/uninstallteams | iex
+
 Clear-RecentItems
 
 #EdgeChromium Policies
