@@ -20,7 +20,7 @@ TASKKILL /IM MS-Teams.exe /F
 TASKKILL /IM MSEdge.exe /F  
 TASKKILL /IM msedgewebview2.exe /F  
 
-# verwijder alle registraties (referntie manager)
+# verwijder alle registraties (referentie manager)
 dsregcmd /cleanupaccounts
 
 # schoon modern apps 
@@ -30,6 +30,8 @@ Get-AppxPackage Microsoft.MicrosoftEdge.Stable | Reset-AppxPackage
 
 #from https://github.com/asheroto/UninstallTeams
 irm asheroto.com/uninstallteams | iex
+  # to include options: 
+  # &([ScriptBlock]::Create((irm asheroto.com/uninstallteams))) -DisableOfficeTeamsInstall
 
 Clear-RecentItems
 
