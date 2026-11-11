@@ -40,6 +40,9 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge" -Name "BrowserSi
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge" -Name "RestoreOnStartup" -Value 0 -PropertyType DWORD
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Edge" -Name "BrowserAddProfileEnabled" -Value 0 -PropertyType DWORD
 New-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Edge" -Name "HideFirstRunExperience" -Value 1 -PropertyType DWORD
+New-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Edge" -Name "PasswordManagerPasskeysEnabled" -Value 1 -PropertyType DWORD
+# start and check https://homotechsual.dev/2023/12/18/Disabling-Browser-Password-Managers-PowerShell
+
 
 $powerMgmt = Get-CimInstance -ClassName MSPower_DeviceEnable -Namespace root/WMI |
     Where-Object InstanceName -Like USB*
